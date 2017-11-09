@@ -1,0 +1,10 @@
+# microservice specific routes
+GET        /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET        /trace                      controllers.LoggingController.traceLevel
+GET        /debug                      controllers.LoggingController.debugLevel
+GET        /info                       controllers.LoggingController.infoLevel
+GET        /warn                       controllers.LoggingController.warnLevel
+GET        /error                      controllers.LoggingController.errorLevel
+
+GET        /all                        controllers.ManyLogsController.allLogs
